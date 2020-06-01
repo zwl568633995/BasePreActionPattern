@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ConsoleApp2.Struct
@@ -16,6 +17,10 @@ namespace ConsoleApp2.Struct
 
         protected override bool DoSomething(BaseAction<string> myBase, string request)
         {
+            if (myBase is Action2 action2)
+            {
+                Console.WriteLine(action2.RecordID);
+            }
             Console.WriteLine("Action3");
             return true;
         }

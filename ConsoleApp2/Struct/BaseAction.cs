@@ -14,7 +14,8 @@ namespace ConsoleApp2.Struct
             _preAction = preAction;
         }
 
-        public virtual bool DoAction(T request) {
+        public virtual bool DoAction(T request)
+        {
             if (_preAction == null)
             {
                 return DoSomething(_preAction, request);
